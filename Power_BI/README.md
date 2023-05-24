@@ -30,3 +30,25 @@ let
 in
     #"Inserted Weekday"
 ```
+
+## DAX Examples
+
+1. Let's start with the basic `SUM()` funtion.
+
+The SUM function calculates the sum of a numeric column or expression. For example, to calculate the total sales amount from a column named "SalesAmount" in a table named "SalesData", you can use the following DAX expression:
+
+```DAX
+TotalSales = SUM(SalesData[SalesAmount])
+```
+
+2. The `CALCULATE` function
+
+The CALCULATE function is used to modify the context in which a calculation is performed. It allows you to apply filters or modify the row context to perform calculations based on specific conditions. For example, to calculate the total sales amount for a specific product category, you can use the following DAX expression:
+
+```DAX
+TotalSalesByCategory = CALCULATE(SUM(SalesData[SalesAmount]), SalesData[Category] = "Electronics")
+```
+
+## Staying up to dat on Power BI Updates
+
+To effectively monitor the monthly updates in Power BI and improve their work, a BI team should adopt a proactive approach. They should stay informed about the latest features, enhancements, and bug fixes introduced in each update. This can be achieved by regularly reviewing the release notes and documentation provided by Microsoft. The team should also participate in relevant forums, communities, and user groups to stay connected with the Power BI community and learn from others' experiences. Additionally, the BI team should allocate dedicated time for testing and exploring the new features in a controlled environment before rolling them out to production. By staying informed, actively engaging with the community, and conducting thorough testing, the BI team can ensure they leverage the latest Power BI capabilities effectively and make informed decisions to enhance their data analysis and reporting workflows.
